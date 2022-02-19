@@ -4,12 +4,13 @@ const ui = (() => {
     search.addEventListener('submit', handleSearchSubmit.bind(null, _getInputValue()));
   }
 
-  function _getInputValue() {
-    return document.querySelector('.js-input').value;
-  }
 
   function displaySearchResults(results) {
 
+  }
+
+  function _getInputValue() {
+    return document.querySelector('.js-input').value;
   }
 
   return {
