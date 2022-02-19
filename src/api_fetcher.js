@@ -8,7 +8,7 @@ async function getWeatherData(location) {
   );
 
   if (!response.ok) {
-    const error = new Error('City not found.');
+    const error = new Error('Location not found.');
     error.name = "NothingFound";
 
     throw error;
