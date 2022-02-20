@@ -14,6 +14,9 @@ async function handleSearchSubmit(inputValue, e) {
     weatherData = await getWeatherData(inputValue);
     reducedWeatherData = await getReducedWeatherData(weatherData);
 
+    // output to DOM
+    ui.displayResults(reducedWeatherData);
+
   } catch (err) {
 
     switch (err.name) {
@@ -25,7 +28,7 @@ async function handleSearchSubmit(inputValue, e) {
       }
     }
   } finally {
-    // output to DOM
+
     console.log(reducedWeatherData);
   }
 }
