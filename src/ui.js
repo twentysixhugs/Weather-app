@@ -11,7 +11,7 @@ const ui = (() => {
 
   function initUnitToggle() {
     const toggleBtn = document.querySelector('.js-toggle-units');
-    toggleBtn.addEventListener('click', () => _handleUnitsToggle);
+    toggleBtn.addEventListener('click', _handleUnitsToggle);
   }
 
   function toggleLoading() {
