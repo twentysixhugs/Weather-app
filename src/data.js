@@ -19,13 +19,7 @@ function getReducedWeatherData(data) {
   return reducedData;
 }
 
-function getCurrentTime() {
-  const now = new Date();
-
-  return now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
-}
 
 export {
   getReducedWeatherData,
-  getCurrentTime,
 };
