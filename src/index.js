@@ -2,6 +2,25 @@ import getWeatherData from './api_fetcher'
 import { getReducedWeatherData } from './data';
 import ui from './ui'
 
+
+(function Units() {
+  let _current = 'metric';
+
+  function toggle() {
+    _current = (_current === 'metric') ? 'imperial' : 'metric';
+  }
+
+  function get() {
+    return _current;
+  }
+
+  return {
+    toggle,
+    get,
+  }
+})();
+
+
 async function handleRequest(requestValue, e) {
   if (e) {
     e.preventDefault();
