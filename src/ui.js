@@ -32,6 +32,11 @@ const ui = (() => {
     document.querySelector('.js-temp').textContent = displayedData[`temp_${currentUnits}`];
     document.querySelector('.js-feels-like').textContent = displayedData[`feels_like_${currentUnits}`];
     _showUnits(_getUnitsChar());
+    _clearInputField();
+  }
+
+  function _clearInputField() {
+    document.querySelector('.js-input').value = '';
   }
 
 
@@ -47,10 +52,12 @@ const ui = (() => {
     return currentUnits === 'metric' ? '\xB0C' : '\xB0F'
   }
 
-  function _handleUnitsToggle() {
+  function _handleUnitsToggle(e) {
     currentUnits = (currentUnits === 'metric') ? 'imperial' : 'metric';
     _showUnits(_getUnitsChar());
     _displayResults();
+
+    e.target.textContent = (e.target.textContent === 'Celsius') ? 'Fahrenheit' : 'Celsius';
   }
 
   function _getInputValue() {
