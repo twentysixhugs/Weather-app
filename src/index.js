@@ -4,7 +4,7 @@ import ui from './ui'
 
 /* getWeatherData(prompt('Enter city/country', 'Minsk')).then(getReducedWeatherData).then(console.log); */
 
-async function handleSearchSubmit(inputValue, e) {
+async function processRequest(inputValue, e) {
   e.preventDefault();
 
   let weatherData;
@@ -33,4 +33,4 @@ async function handleSearchSubmit(inputValue, e) {
   }
 }
 
-ui.initSearch(handleSearchSubmit);
+ui.initSearch(processRequest);
