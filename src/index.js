@@ -4,14 +4,14 @@ import ui from './ui'
 
 /* getWeatherData(prompt('Enter city/country', 'Minsk')).then(getReducedWeatherData).then(console.log); */
 
-async function processRequest(inputValue, e) {
+async function processRequest(requestValue, e) {
   e.preventDefault();
 
   let weatherData;
   let reducedWeatherData;
 
   try {
-    weatherData = await getWeatherData(inputValue);
+    weatherData = await getWeatherData(requestValue);
     reducedWeatherData = await getReducedWeatherData(weatherData);
 
     // output to DOM
@@ -33,4 +33,8 @@ async function processRequest(inputValue, e) {
   }
 }
 
-ui.initSearch(processRequest);
+
+(function init() {
+  ui.initSearch(processRequest);
+
+})();
