@@ -80,8 +80,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-
-
+  
   background: url(./assets/bg.jpg);
 }
 
@@ -102,7 +101,6 @@ body {
   flex-flow: column;
   gap: 20px;
 }
-
 
 
 /* Main weather data */
@@ -154,7 +152,6 @@ body {
   border-bottom: 1px solid rgb(255, 255, 255);
   background: transparent;
   color: white;
-  
 }
 
 .search__input:focus {
