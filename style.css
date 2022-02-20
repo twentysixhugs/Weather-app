@@ -67,7 +67,8 @@ body {
   padding: var(--content-indent);
 }
 
-.content__loading--active {
+.content__loading {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -75,12 +76,14 @@ body {
   right: 0;
 
   margin: var(--content-indent);
-  
+
+  background: rgba(0, 0, 0, 0.192);
+}
+
+.content__loading--active {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: rgba(0, 0, 0, 0.192);
 }
 
 /* || Weather data */
