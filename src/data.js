@@ -22,7 +22,7 @@ function getReducedWeatherData(data) {
 function getCurrentTime() {
   const now = new Date();
 
-  return now.toLocaleTimeString('en-US', { hour: '1-digit', minute: '2-digit' })
+  return now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
 }
 
 export {
