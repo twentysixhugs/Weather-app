@@ -10,25 +10,27 @@
 </head>
 
 <body>
-  <main class="data">
-    <div class="data__weather-main">
-      <span class="data__temperature">
-        17 C
-      </span>
-      <span class="data__location-info">
-        Minsk, BY. 5:32 pm
-      </span>
-    </div>
-    <div class="data__weather-extra">
-      <span class="data__feels-like">Feels like<span class="js-feels-like">16 C</span></span>
-      <span class="data__humidity">Humidity<span class="js-humidity">26</span></span>
-      <span class="data__wind">Wind speed<span class="js-wind-speed">200 m/s</span></span>
-    </div>
-  </main>
-  <form class="search js-search">
-    <label for="search" class="search__label">Enter location</label>
-    <input type="text" class="search__input js-input" id="search" name="search">
-  </form>
+  <div class="content">
+    <main class="data">
+      <div class="data__weather--main">
+        <span class="data__temperature">
+          17 C
+        </span>
+        <span class="data__location-info">
+          Minsk, BY. 5:32 pm
+        </span>
+      </div>
+      <div class="data__weather--extra">
+        <span class="data__feels-like">Feels like<span class="js-feels-like">16 C</span></span>
+        <span class="data__humidity">Humidity<span class="js-humidity">26</span></span>
+        <span class="data__wind">Wind speed<span class="js-wind-speed">200 m/s</span></span>
+      </div>
+    </main>
+    <form class="search js-search">
+      <label for="search" class="search__label">Enter location</label>
+      <input type="text" class="search__input js-input" id="search" name="search">
+    </form>
+  </div>
   <script src="./main.js"></script>
 </body>
 
