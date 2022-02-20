@@ -7,15 +7,15 @@ class Data {
 }
 
 function FtoC(t) {
-  return (t - 32) * 5 / 9
+  return Math.round((t - 32) * 5 / 9);
 }
 
 function getProcessedWeatherData(data) {
   const processedData = new Data(
-    ['feels_like_fahrenheit', data.main.feels_like],
-    ['feels_like_celsius', FtoC(data.main.feels_like)],
-    ['temp_fahrenheit', data.main.temp],
-    ['temp_celsius', FtoC(data.main.temp)],
+    ['feels_like_imperial', Math.round(data.main.feels_like)],
+    ['feels_like_metric', FtoC(data.main.feels_like)],
+    ['temp_imperial', Math.round(data.main.temp)],
+    ['temp_metric', FtoC(data.main.temp)],
     ['humidity', data.main.humidity],
     ['name', data.name],
     ['country', data.sys.country],
