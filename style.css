@@ -67,7 +67,7 @@ body {
   padding: var(--content-indent);
 }
 
-.content__loading {
+.content__loading--active {
   position: absolute;
   top: 0;
   left: 0;
