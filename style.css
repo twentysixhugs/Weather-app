@@ -56,12 +56,31 @@ body {
 /* || Sitewide */
 
 .content {
+  --content-indent: 150px;
+  position: relative;
+
   display: flex;
   flex-flow: column;
   justify-content: space-between;
 
   height: 100vh;
-  padding: 150px
+  padding: var(--content-indent);
+}
+
+.is-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  margin: var(--content-indent);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.192);
 }
 
 /* || Weather data */
