@@ -1,5 +1,5 @@
 import getWeatherData from './api_fetcher'
-import getReducedWeatherData from './data';
+import { getReducedWeatherData, getCurrentTime } from './data';
 import ui from './ui'
 
 /* getWeatherData(prompt('Enter city/country', 'Minsk')).then(getReducedWeatherData).then(console.log); */
