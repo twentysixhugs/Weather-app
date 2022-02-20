@@ -1,25 +1,6 @@
 import getWeatherData from './api_fetcher'
-import { getReducedWeatherData } from './data';
+import { getProcessedWeatherData } from './data'
 import ui from './ui'
-
-
-(function Units() {
-  let _current = 'metric';
-
-  function toggle() {
-    _current = (_current === 'metric') ? 'imperial' : 'metric';
-  }
-
-  function get() {
-    return _current;
-  }
-
-  return {
-    toggle,
-    get,
-  }
-})();
-
 
 async function handleRequest(requestValue, e) {
   if (e) {
@@ -29,19 +10,11 @@ async function handleRequest(requestValue, e) {
   try {
     ui.toggleLoading();
 
-    const reducedWeatherData = await processRequest(requestValue);
+    const processedWeatherData = await processRequest(requestValue);
     // output to DOM
-    ui.displayResults(reducedWeatherData);
+    ui.handleSearchOutput(processedWeatherData);
   } catch (err) {
-
-    switch (err.name) {
-      case 'TypeError': {
-        /* Run DOM function with some parameters as 'no data' */
-      }
-      case 'NothingFound': {
-        alert(err.message);
-      }
-    }
+    alert(err.message);
   } finally {
     ui.toggleLoading();
   }
@@ -49,13 +22,14 @@ async function handleRequest(requestValue, e) {
 
 async function processRequest(requestValue) {
   let weatherData = await getWeatherData(requestValue);
-  let reducedWeatherData = await getReducedWeatherData(weatherData);;
+  let processedWeatherData = await getProcessedWeatherData(weatherData);;
 
-  return reducedWeatherData;
+  return processedWeatherData;
 }
 
 
 (async function init() {
   await handleRequest('Minsk');
   ui.initSearch(handleRequest);
+  ui.initUnitToggle();
 })();
