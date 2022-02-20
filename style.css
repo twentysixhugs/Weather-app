@@ -44,19 +44,25 @@ table {
 
 /* || General */
 
-:root,
-body {
-  font-size: 16px;
+:root {
+  font-size: 26px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color: white;
 }
 
 * {
   box-sizing: border-box;
 }
 
+body {
+  background: url(./assets/bg.jpg);
+}
+
 /* || Sitewide */
 
 .content {
-  --content-indent: 150px;
+  --content-indent: 100px 320px;
   position: relative;
 
   display: flex;
@@ -92,19 +98,66 @@ body {
   justify-content: space-between;
 }
 
-.data__weather--main {
+.data__weather {
   display: flex;
   flex-flow: column;
+  gap: 20px;
 }
 
+
+
+/* Main weather data */
+
+.data__temperature {
+  font-size: 4rem;
+}
+
+.data__location-info {
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.data__toggle-units {
+  width: 215px;
+  
+  color: white;
+
+  background-color: #ffffff10;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+/* Extra weather data */
+
 .data__weather--extra {
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+.feels-like--main {
+  margin-right: 4px;
 }
 
 /* || Location search form */
 
-input { /* temporary */
-  border: 1px solid black;
+.search {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
+.search__input { /* temporary */
+  height: 40px;
+  width: 17vw;
   padding: 4px;
+
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background: transparent;
+  color: white;
+  
+}
+
+.search__input:focus {
+  outline: none;
 }
