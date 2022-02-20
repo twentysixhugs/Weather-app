@@ -81,9 +81,8 @@ body {
   bottom: 0;
   right: 0;
 
-  margin: var(--content-indent);
 
-  background: rgba(0, 0, 0, 0.192);
+  background: url(./assets/bg.jpg);
 }
 
 .content__loading--active {
@@ -119,7 +118,7 @@ body {
 
 .data__toggle-units {
   width: 215px;
-  
+
   color: white;
 
   background-color: #ffffff10;
