@@ -31,7 +31,7 @@ const ui = (() => {
     document.querySelector('.js-wind-speed').textContent = displayedData['wind_speed'];
     document.querySelector('.js-temp').textContent = displayedData[`temp_${currentUnits}`];
     document.querySelector('.js-feels-like').textContent = displayedData[`feels_like_${currentUnits}`];
-    _showUnits(currentUnits === 'metric' ? '\xB0C' : '\xB0F');
+    _showUnits(_getUnitsChar());
   }
 
 
@@ -43,8 +43,14 @@ const ui = (() => {
     });
   }
 
-  function _handleUnitsToggle() {
+  function _getUnitsChar() {
+    return currentUnits === 'metric' ? '\xB0C' : '\xB0F'
+  }
 
+  function _handleUnitsToggle() {
+    currentUnits = (currentUnits === 'metric') ? 'imperial' : 'metric';
+    _showUnits(_getUnitsChar());
+    _displayResults();
   }
 
   function _getInputValue() {
