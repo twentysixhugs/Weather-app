@@ -12,29 +12,33 @@
 <body>
   <div class="content">
     <main class="data">
-      <div class="data__weather--main">
-        <span class="data__temperature js-temp">
-          17 C
+      <div class="data__weather data__weather--main">
+        <span class="data__temperature">
+          <span class="js-temp"></span><span class="data__unit js-unit"></span>
         </span>
         <span class="data__location-info js-location">
           Minsk, BY.
         </span>
-        <button class="data__change-unit">
+        <button class="data__toggle-units js-toggle-units">
           <span class="data__unit">C</span>
           <span class="data__unit">F</span>
         </button>
       </div>
-      <div class="data__weather--extra">
-        <span class="data__feels-like">Feels like <span class="js-feels-like">16 C</span></span>
-        <span class="data__humidity">Humidity: <span class="js-humidity">26</span></span>
-        <span class="data__wind">Wind speed: <span class="js-wind-speed">200 m/s</span></span>
+      <div class="data__weather data__weather--extra">
+        <span class="data__feels-like">
+          Feels like
+          <span class="js-feels-like"></span>
+          <span class="js-unit"></span>
+        </span>
+        <span class="data__humidity">Humidity: <span class="js-humidity"></span>%</span>
+        <span class="data__wind">Wind speed: <span class="js-wind-speed"></span> km/h</span>
       </div>
     </main>
     <form class="search js-search">
       <label for="search" class="search__label">Enter location</label>
       <input type="text" class="search__input js-input" id="search" name="search">
     </form>
-    <div class="content__loading js-is-loading content__loading--active">Loading...</div>
+    <div class="content__loading js-is-loading">Loading...</div>
   </div>
   <script src="./main.js"></script>
 </body>
