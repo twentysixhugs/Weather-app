@@ -13,15 +13,15 @@
   <div class="content">
     <main class="data">
       <div class="data__weather--main">
-        <span class="data__temperature">
+        <span class="data__temperature js-temp">
           17 C
         </span>
-        <span class="data__location-info">
+        <span class="data__location-info js-location">
           Minsk, BY.
         </span>
-        <button class="data__change-measurement">
-          <span class="measurement">C</span>
-          <span class="measurement">F</span>
+        <button class="data__change-unit">
+          <span class="data__unit">C</span>
+          <span class="data__unit">F</span>
         </button>
       </div>
       <div class="data__weather--extra">
@@ -34,6 +34,7 @@
       <label for="search" class="search__label">Enter location</label>
       <input type="text" class="search__input js-input" id="search" name="search">
     </form>
+    <div class="content__loading">Loading...</div>
   </div>
   <script src="./main.js"></script>
 </body>
