@@ -1,9 +1,16 @@
 const ui = (() => {
+  /* Init */
+
   function initSearch(handleSearchSubmit) {
     const search = document.querySelector('.js-search');
     search.addEventListener('submit', (e) => { handleSearchSubmit(_getInputValue(), e) });
   }
 
+  function toggleLoading() {
+    document.querySelector('.js-is-loading').classList.toggle('content__loading--active');
+  }
+
+  /* Output */
 
   function displayResults(data) {
     document.querySelector('.js-temp').textContent = data['temp'];
@@ -19,6 +26,7 @@ const ui = (() => {
 
   return {
     initSearch,
+    toggleLoading,
     displayResults
   };
 })();

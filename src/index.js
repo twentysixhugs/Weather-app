@@ -2,21 +2,17 @@ import getWeatherData from './api_fetcher'
 import { getReducedWeatherData } from './data';
 import ui from './ui'
 
-/* getWeatherData(prompt('Enter city/country', 'Minsk')).then(getReducedWeatherData).then(console.log); */
-
-async function processRequest(requestValue, e) {
-  e.preventDefault();
-
-  let weatherData;
-  let reducedWeatherData;
+async function handleRequest(requestValue, e) {
+  if (e) {
+    e.preventDefault();
+  }
 
   try {
-    weatherData = await getWeatherData(requestValue);
-    reducedWeatherData = await getReducedWeatherData(weatherData);
+    ui.toggleLoading();
 
+    const reducedWeatherData = await processRequest(requestValue);
     // output to DOM
     ui.displayResults(reducedWeatherData);
-
   } catch (err) {
 
     switch (err.name) {
@@ -28,13 +24,19 @@ async function processRequest(requestValue, e) {
       }
     }
   } finally {
-
-    console.log(reducedWeatherData);
+    ui.toggleLoading();
   }
 }
 
+async function processRequest(requestValue) {
+  let weatherData = await getWeatherData(requestValue);
+  let reducedWeatherData = await getReducedWeatherData(weatherData);;
 
-(function init() {
-  ui.initSearch(processRequest);
+  return reducedWeatherData;
+}
 
+
+(async function init() {
+  await handleRequest('Minsk');
+  ui.initSearch(handleRequest);
 })();
