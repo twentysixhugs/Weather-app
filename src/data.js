@@ -6,20 +6,26 @@ class Data {
   }
 }
 
-function getReducedWeatherData(data) {
-  const reducedData = new Data(
-    ['feels_like', data.main.feels_like],
+function FtoC(t) {
+  return (t - 32) * 5 / 9
+}
+
+function getProcessedWeatherData(data) {
+  const processedData = new Data(
+    ['feels_like_fahrenheit', data.main.feels_like],
+    ['feels_like_celsius', FtoC(data.main.feels_like)],
+    ['temp_fahrenheit', data.main.temp],
+    ['temp_celsius', FtoC(data.main.temp)],
     ['humidity', data.main.humidity],
-    ['temp', data.main.temp],
     ['name', data.name],
     ['country', data.sys.country],
     ['wind_speed', data.wind.speed],
   );
 
-  return reducedData;
+  return processedData;
 }
 
 
 export {
-  getReducedWeatherData,
+  getProcessedWeatherData,
 };
