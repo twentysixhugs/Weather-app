@@ -1,6 +1,7 @@
 # Weather app
 
 **The live preview is available in GitHub pages**
+
 *I know the API key is publicly exposed here.
 When I build this project, I didn't yet know how to use backend at all
 The key is free, so I had nothing to lose and just wanted to practice what I
