@@ -162,6 +162,10 @@ body {
 
 .footer {
   position: absolute;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  gap: 4px;
   bottom: 0.5rem;
   right: 0.7rem;
   font-size: 16px;
@@ -169,5 +173,6 @@ body {
 
 .footer__link {
   text-decoration: none;
-  color: rgb(255, 251, 192);
+  font-weight: 300;
+  color: rgb(255, 226, 192);
 }
