@@ -5,8 +5,7 @@
 
 ## Key features
 
-- Fetches data from an API
-- It looks nice. Really
+- Fetches weather data from an API
 
 ---
 *I know the API key is publicly exposed here.
