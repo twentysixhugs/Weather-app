@@ -1,5 +1,5 @@
 # Weather app
-### [Live preview](https://twentysixhugs.github.io/weather-app/)
+### [Live preview](https://twentysixhugs.github.io/Weather-app/)
 
 ---
 
