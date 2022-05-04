@@ -169,6 +169,11 @@ body {
   .root {
     --content-indent: 100px 30px;
   }
+
+  .wrapper--search-footer {
+    flex-flow: column;
+    gap: 10px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -183,7 +188,5 @@ body {
   .wrapper--search-footer {
     margin-top: 30px;
     margin-bottom: 10px;
-    flex-flow: column;
-    gap: 10px;
   }
 }
