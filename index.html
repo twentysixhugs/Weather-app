@@ -36,18 +36,21 @@
         <span class="data__wind">Wind speed: <span class="js-wind-speed"></span> km/h</span>
       </div>
     </main>
-    <form class="search js-search">
-      <label for="search" class="search__label">Enter location</label>
-      <input type="text" class="search__input js-input" id="search" name="search">
-    </form>
+    <div class="wrapper wrapper--search-footer">
+      <form class="search js-search">
+        <label for="search" class="search__label">Enter location</label>
+        <input type="text" class="search__input js-input" id="search" name="search">
+      </form>
+      <footer class="footer">
+        <div class="footer__text">Made with love by <a class="footer__link" target="_blank" rel="noreferrer"
+            href="https://github.com/twentysixhugs">Iaan Lamanosau :3</a></div>
+        <a target="_blank" rel="noreferrer" href="https://github.com/twentysixhugs/weather-app"
+          class="footer__link">View
+          code</a>
+      </footer>
+    </div>
     <div class="content__loading js-is-loading">Loading...</div>
   </div>
-  <footer class="footer">
-    <div class="footer__text">Made with love by <a class="footer__link" target="_blank" rel="noreferrer"
-        href="https://github.com/twentysixhugs">Iaan Lamanosau :3</a></div>
-    <a target="_blank" rel="noreferrer" href="https://github.com/twentysixhugs/weather-app" class="footer__link">View
-      code</a>
-  </footer>
   <script src="./main.js"></script>
 </body>
 
